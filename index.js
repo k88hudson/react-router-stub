@@ -7,7 +7,7 @@ var TestUtils = React.addons.TestUtils;
 
 var reactRouterStub = function (Component, props, stubs) {
   var func = React.PropTypes.func;
-  var noop = function() {};
+  var noop = function () {};
 
   return React.createClass({
     childContextTypes: {
@@ -24,7 +24,7 @@ var reactRouterStub = function (Component, props, stubs) {
       isActive: func,
     },
 
-    getChildContext: function() {
+    getChildContext: function () {
       return assign({
         makePath: noop,
         makeHref: noop,
@@ -40,15 +40,15 @@ var reactRouterStub = function (Component, props, stubs) {
       }, stubs);
     },
 
-    render: function() {
-      return <Component {...props} ref="childComponent" />;
+    render: function () {
+      return React.createElement(Component, React.__spread({ref: 'childComponent'}, props));
     }
   });
 };
 
 reactRouterStub.render = function(Component, props) {
-  var Stubbed = stubRouterContext(Component, props);
-  return TestUtils.renderIntoDocument(<Stubbed/>).refs.childComponent;
+  var Stubbed = reactRouterStub(Component, props);
+  return TestUtils.renderIntoDocument(React.createElement(Stubbed, null));
 };
 
 reactRouterStub.unmount = function(childComponent) {
