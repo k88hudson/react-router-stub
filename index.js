@@ -41,7 +41,7 @@ var reactRouterStub = function (Component, props, stubs) {
     },
 
     render: function () {
-      return React.createElement(Component, React.__spread({ref: 'childComponent'}, props));
+      return React.createElement(Component, React.__spread({ref: 'childComponent'}, props)).refs.childComponent;
     }
   });
 };
