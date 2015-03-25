@@ -41,14 +41,14 @@ var reactRouterStub = function (Component, props, stubs) {
     },
 
     render: function () {
-      return React.createElement(Component, React.__spread({ref: 'childComponent'}, props)).refs.childComponent;
+      return React.createElement(Component, React.__spread({ref: 'childComponent'}, props));
     }
   });
 };
 
 reactRouterStub.render = function(Component, props) {
   var Stubbed = reactRouterStub(Component, props);
-  return TestUtils.renderIntoDocument(React.createElement(Stubbed, null));
+  return TestUtils.renderIntoDocument(React.createElement(Stubbed, null)).refs.childComponent;
 };
 
 reactRouterStub.unmount = function(childComponent) {
