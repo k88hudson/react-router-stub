@@ -1,6 +1,6 @@
 # React Router Stub
 
-This is a utility for stubbing routing context when testing code using `react-router`. It is heavily based on the docs at https://github.com/rackt/react-router/blob/master/docs/guides/testing.md and some intiial work by @toolness.
+This is a utility for stubbing routing context when testing code using `react-router`. It is heavily based on the docs at https://github.com/rackt/react-router/blob/master/docs/guides/testing.md and some modifications by @toolness.
 
 ```
 npm install react-router-stub
@@ -29,9 +29,13 @@ reactRouterStub.unmount(instance);
 ## API
 
 ```
-`reactRouterStub(Component, props, stub)`: Returns a reference to the stub itself
+### `reactRouterStub(Component, props, stub)`
+Returns a reference to the stub itself
 
-`reactRouterStub.render(Component, props)`: Returns a instance(`componentInstance`) of `Component`
+### `reactRouterStub.render(Component, props)`
+Returns a instance(`componentInstance`) of `Component`
 
-`reactRouterStub.unmount(componentInstance)`: Unmounts the parent node of the `componentInstance`
+### `reactRouterStub.unmount(componentInstance)`
+Unmounts the parent node of the `componentInstance`
+
 ```
