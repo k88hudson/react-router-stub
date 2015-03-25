@@ -28,7 +28,6 @@ reactRouterStub.unmount(instance);
 
 ## API
 
-```
 ### `reactRouterStub(Component, props, stub)`
 Returns a reference to the stub itself
 
@@ -37,5 +36,3 @@ Returns a instance(`componentInstance`) of `Component`
 
 ### `reactRouterStub.unmount(componentInstance)`
 Unmounts the parent node of the `componentInstance`
-
-```
