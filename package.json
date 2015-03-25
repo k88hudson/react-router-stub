@@ -1,6 +1,6 @@
 {
   "name": "react-router-stub",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A stubbing utility for react router, see https://github.com/rackt/react-router/blob/master/docs/guides/testing.md",
   "main": "index.js",
   "author": "@k88hudson, @toolness",
