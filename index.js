@@ -46,8 +46,8 @@ var reactRouterStub = function (Component, props, stubs) {
   });
 };
 
-reactRouterStub.render = function(Component, props) {
-  var Stubbed = reactRouterStub(Component, props);
+reactRouterStub.render = function(Component, props, stubs) {
+  var Stubbed = reactRouterStub(Component, props, stubs);
   return TestUtils.renderIntoDocument(React.createElement(Stubbed, null)).refs.childComponent;
 };
 
