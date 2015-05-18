@@ -13,7 +13,7 @@ var reactRouterStub = require('react-router-stub');
 var SomeComponent = require('../some-component');
 
 var instance = reactRouterStub.render(SomeComponent, {
-  foo: 'foo'
+  foo: 'foo',
   bar: 123
 });
 
