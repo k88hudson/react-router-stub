@@ -6,7 +6,7 @@
   "author": "@k88hudson, @toolness",
   "license": "MPL-2.0",
   "dependencies": {
-    "react": "^0.12.2",
-    "react-router": "^0.12.4"
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
   }
 }
